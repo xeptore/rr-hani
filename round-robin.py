@@ -108,11 +108,11 @@ for i, p in enumerate(ps):
 
 print("\n\n")
 print("{:35}".format(" -> First Response Time Average:"),
-      "{:.4}".format(sum([p.Response for p in ps]) / pn))
+      "{:.2f}".format(sum([p.Response for p in ps]) / pn))
 print("{:35}".format(" -> Total Response Time Average:"),
-      "{:.4}".format(sum([p.TotalResponse for p in ps]) / pn))
+      "{:.2f}".format(sum([p.TotalResponse for p in ps]) / pn))
 print("{:35}".format(" -> Wait Time Average:"),
-      "{:.4}".format(sum([p.Wait for p in ps]) / pn))
+      "{:.2f}".format(sum([p.Wait for p in ps]) / pn))
 print("{:35}".format(" -> Turn Around Time Average:"),
-      "{:.4}".format(sum([p.TurnAround for p in ps]) / pn))
+      "{:.2f}".format(sum([p.TurnAround for p in ps]) / pn))
 print("\n\n")
