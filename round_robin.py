@@ -51,14 +51,15 @@ for i in range(pn):
     exe = parse_abs_int(input("{:22}".format("  * Execution Time: ")))
     ps.append(Process(arr, exe))
 
+# sorts processes by their arrival time
+ps.sort(key=lambda p: p.Arrival)
+
 # removes any existance time offset from processes start time
 ofst = ps[0].Arrival
 for p in ps:
     p.Arrival -= ofst
     p.OrigArrival -= ofst
 
-# sorts processes by their arrival time
-ps.sort(key=lambda p: p.Arrival)
 
 # pushed processes forward to next nearest quantum time
 for p in ps[1:]:
