@@ -61,7 +61,7 @@ for p in ps:
     p.OrigArrival -= ofst
 
 
-# pushed processes forward to next nearest quantum time
+# pushes processes forward to next nearest quantum time
 for p in ps[1:]:
     t = 1 + p.Arrival // qtm
     p.Wait += t * qtm - p.Arrival
